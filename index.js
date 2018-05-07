@@ -40,6 +40,6 @@ if (message.content.includes('+code')) {
 });
 
 
-client.login("NDQyMTQyNjk5NDQxODgxMDg4.Dc6kvA.sYU5aqO3BmW3ET8m3xLwUwKWRV8")
+client.login(process.env.TOKEN)
 
 
