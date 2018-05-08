@@ -34,7 +34,7 @@ client.on('message', msg => {
 
 client.on('message',message=> {
 if (message.content.includes('+code')) {
-    if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('انت لا تملك الصلاحية!');
+    if (!message.member.roles.find("name", "code.bunker")) return message.channel.send('انت لا تملك الصلاحية!');
     message.guild.me.setNickname(message.content.replace('+code', ''));
 }
 });
