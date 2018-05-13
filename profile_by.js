@@ -383,5 +383,5 @@ message.channel.send(':ballot_box_with_check:**تم تغير معلوماتك ب
 )
 
 
-client.login('NDQzMDgxOTQ4NTUwOTIyMjQw.DdRR1A.WF5UvB9MpT82L72Rx1rr10xmJHM');
+client.login(process.env.TOKEN);
 
