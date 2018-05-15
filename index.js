@@ -1,35 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const arraySort = require('array-sort'),
-      table = require('table');
-
-client.on('message' , async (message) => {
-var prefix = ('.');
-    if(message.content.startsWith(prefix + "i")) {
-
-  let invites = await message.guild.fetchInvites();
-
-    invites = invites.array();
-
-    arraySort(invites, 'uses', { reverse: true });
-
-    let possibleInvites = [['User Invited', 'Uses']];
-    invites.forEach(i => {
-      possibleInvites.push([i.inviter.username , i.uses]);
-    })
-    const embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setTitle("دعوات السيرفر")
-    .addField('المتصدرين' , `\`\`\`${table.table(possibleInvites)}\`\`\``)
-    .addField('**last day on earth ♥**')
-    .setFooter('sk Bot', 'https://c.top4top.net/p_831fzcx71.png')
-    .setThumbnail(message.author.avatarURL)
-
-    message.channel.send(embed)
-    }
-});
-
 const devs = ['413509726735826946' , '' , '' , ''];
 const adminprefix = "ldoe";
 client.on('message', message => {
