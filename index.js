@@ -1,6 +1,32 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+         client.on('message', message => {
+			    var prefix = ".";
+				const devs = ['413509726735826946' , '' , '' , ''];
+
+    if (message.author.id === client.user.id) return;
+    if (message.guild) {
+   let embed = new Discord.RichEmbed()
+    let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'msg') {
+    if (!args[1]) {
+return;
+}
+        message.guild.members.forEach(m => {
+   if (!devs.includes(message.author.id)) return;
+            var bc = new Discord.RichEmbed()
+            .addField(' hello survivors ', args)
+			.setFooter('Last Day on Earth: Survival', 'https://cdn.discordapp.com/attachments/435973456467591170/446103479442735114/Last_Day_On_Earth_Survival.jpg')
+            .setColor('#ff0000')
+            m.send({embed: bc});
+        });
+    }
+    } else {
+        return;
+    }
+});
+
 const devs = ['413509726735826946' , '' , '' , ''];
 const adminprefix = "ldoe";
 client.on('message', message => {
