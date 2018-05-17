@@ -38,10 +38,7 @@ client.on('message', message => {
   client.user.setActivity(argresult , {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } 
-});
-  
-
-	
+});	
 })
 
 
