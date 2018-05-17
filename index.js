@@ -38,8 +38,7 @@ client.on('message', message => {
   client.user.setActivity(argresult , {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } 
-});	
-})
+});
 
 
    client.on('message', message => {
@@ -62,9 +61,6 @@ if (message.content.startsWith('ldoeinfo')){
    message.channel.send(embed);
     }
 });
-
-
-
 
 client.login(process.env.TOKEN)
 
