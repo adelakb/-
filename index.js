@@ -27,60 +27,52 @@ return;
     }
 });
 
-const devs = ['413509726735826946' , '' , '' , ''];
-const adminprefix = "ldoe";
+const devs = ['413509726735826946' , '290260570374930432' , '406100430578253826' , ''];
+const adminprefix = "+";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'ply')) {
-    client.user.setGame(argresult);
+   else 
+  if (message.content.startsWith(adminprefix + 'code')) {
+  client.user.setActivity(argresult , {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
+  } 
+  
+  client.on('message', msg => {
+  if (msg.content === 'code') 
+  {
+    msg.channel.send(`${argresult}`);
   }
-  });
+});
+  
 
-client.on('message', msg => {
-    if (msg.content === 'كود البنكر') {
-        msg.channel.send(':point_up: ');
+	
+})
+
+
+   client.on('message', message => {
+if (message.content.startsWith('ldoeinfo')){
+     let embed = new Discord.RichEmbed()
+  .setColor("random")
+  .setFooter('Last Day on Earth: Survival', 'https://cdn.discordapp.com/attachments/435973456467591170/446103479442735114/Last_Day_On_Earth_Survival.jpg')
+  .addField('OFFICIAL LINKS', ':tm:')
+  .addField('Google Play (for Android users):' , 'https://goo.gl/24XTLu')
+  .addField('Apps Store (for iOS users) :' , 'https://appsto.re/ru/-eMbkb.i')
+  .addField('SUPPORT', 'https://kefirgames.helpshift.com/a/last-day-on-earth/')
+  .addField('FACEBOOK', 'https://www.facebook.com/lastdayonearthgame')
+  .addField('INSTAGRAM', 'https://www.instagram.com/lastdayonearthgame')
+  .addField('TELEGRAM', 'https://t.me/lastdayonearthsurvival')
+  .addField('TWITTER', 'https://twitter.com/lastdaysurvival')
+  .addField('REDDIT', 'https://www.reddit.com/r/LastDayonEarthGame')
+  .addField('DISCORD', 'https://discord.gg/c7Snete')
+
+
+   message.channel.send(embed);
     }
 });
 
-client.on('message', msg => {
-    if (msg.content === 'رمز البنكر') {
-        msg.channel.send(':point_up: ');
-    }
-});
 
-client.on('message', msg => {
-    if (msg.content === 'bunker code') {
-        msg.channel.send(':point_up: ');
-    }
-});
-
-client.on('message', msg => {
-    if (msg.content === 'code bunker') {
-        msg.channel.send(':point_up: ');
-    }
-});
-
-client.on('message',message=> {
-if (message.content.includes('+code')) {
-    if (!message.member.roles.find("name", "code.bunker")) return message.channel.send('انت لا تملك الصلاحية!');
-    message.guild.me.setNickname(message.content.replace('+code', ''));
-}
-});
 
 
 client.login(process.env.TOKEN)
