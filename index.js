@@ -11,25 +11,25 @@ client.on('message', message => {
 
 client.on('message', message => 
 { if (message.content === 'code bunker') {
-message.channel.send('                   :arrow_up: ');
+message.channel.send(':radio:');
 }
 });
 
 client.on('message', message => 
 { if (message.content === 'bunker code') {
-message.channel.send('                   ');
+message.channel.send(':radio:');
 }
 });
 
 client.on('message', message => 
 { if (message.content === 'كود البنكر') {
-message.channel.send('                   :arrow_up: ');
+message.channel.send(':radio:');
 }
 });
 
 client.on('message', message => 
 { if (message.content === 'رمز البنكر') {
-message.channel.send('                   :arrow_up: ');
+message.channel.send(':radio:');
 }
 });
 
