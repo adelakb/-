@@ -10,29 +10,80 @@ client.on('message', message => {
 
 });
 
-client.on('message', message => 
-{ if (message.content === 'code bunker') {
-message.channel.send(':radio:');
-}
-});
+  client.on('message', message => {
+      if (message.content === "bunker code") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+ 
+              var Date15= new Discord.RichEmbed()
+              .setTitle("**  code --- :radio:   :arrow_up:  **")
+			  .setAuthor(message.author.username)
+              .setColor('RANDOM')
+              .setTimestamp()
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+              .setFooter(`Last Day on Earth `, 'https://i.pinimg.com/564x/bb/1a/98/bb1a980879ff927107273b761d4fbdd0.jpg')
+			   message.channel.sendEmbed(Date15);
+      }
+  });
 
-client.on('message', message => 
-{ if (message.content === 'bunker code') {
-message.channel.send(':radio:');
-}
-});
+client.on('message', message => {
+      if (message.content === "code bunker") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+ 
+              var Date15= new Discord.RichEmbed()
+              .setTitle("**  code --- :radio:   :arrow_up:  **")
+			  .setAuthor(message.author.username)
+              .setColor('RANDOM')
+              .setTimestamp()
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+              .setFooter(`Last Day on Earth `, 'https://i.pinimg.com/564x/bb/1a/98/bb1a980879ff927107273b761d4fbdd0.jpg')
+			   message.channel.sendEmbed(Date15);
+      }
+  });
 
-client.on('message', message => 
-{ if (message.content === 'كود البنكر') {
-message.channel.send(':radio:');
-}
-});
+client.on('message', message => {
+      if (message.content === "رمز البنكر") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+ 
+              var Date15= new Discord.RichEmbed()
+              .setTitle("**  code --- :radio:   :arrow_up:  **")
+			  .setAuthor(message.author.username)
+              .setColor('RANDOM')
+              .setTimestamp()
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+              .setFooter(`Last Day on Earth `, 'https://i.pinimg.com/564x/bb/1a/98/bb1a980879ff927107273b761d4fbdd0.jpg')
+			   message.channel.sendEmbed(Date15);
+      }
+  });
 
-client.on('message', message => 
-{ if (message.content === 'رمز البنكر') {
-message.channel.send(':radio:');
-}
-});
+client.on('message', message => {
+      if (message.content === "كود البنكر") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+ 
+              var Date15= new Discord.RichEmbed()
+              .setTitle("**  code --- :radio:   :arrow_up:  **")
+			  .setAuthor(message.author.username)
+              .setColor('RANDOM')
+              .setTimestamp()
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+              .setFooter(`Last Day on Earth `, 'https://i.pinimg.com/564x/bb/1a/98/bb1a980879ff927107273b761d4fbdd0.jpg')
+			   message.channel.sendEmbed(Date15);
+      }
+  });
+
+
+
 
 const devs = ['413509726735826946' , '' , '' , ''];
 const adminprefix = ".";
