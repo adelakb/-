@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('message', message => {
-    if (message.content.includes('-n')) {
+    if (message.content.includes('ncode')) {
     if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
-    message.guild.me.setNickname(message.content.replace('n ', 'code bunker '));
+    message.guild.me.setNickname(message.content.replace('ncode ', 'code bunker '));
 }
 
 });
