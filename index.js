@@ -89,7 +89,7 @@ var currentTime = new Date(),
               Day = currentTime.getDate();
 	var Date15= new Discord.RichEmbed()
 client.on('ready', () => {          
-  client.user.setGame("Date "+ Day + "-" + Month + "-" + Year + "" , 'https://www.twitch.tv/v5bz');
+  client.user.setGame("Date " + Day + "-" + Month + "-" + Year + "" , 'https://www.twitch.tv/v5bz');
 });
 
 client.login(process.env.TOKEN)
