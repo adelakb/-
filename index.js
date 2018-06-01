@@ -90,7 +90,6 @@ client.on('ready', () => {
               Month = currentTime.getMonth() + 1,
               Day = currentTime.getDate();
 	var Date15= new Discord.RichEmbed()
-              .setTitle("**  code --- :radio:   :arrow_up:  **")
   client.user.setGame("Date "+ Day + "-" + Month + "-" + Year + "" `التاريخ`,'https://www.twitch.tv/v5bz');
 });
 
