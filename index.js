@@ -10,6 +10,7 @@ client.on('message', message => {
 
 });
 
+
   client.on('message', message => {
       if (message.content === "bunker code") {
           var currentTime = new Date(),
@@ -83,32 +84,15 @@ client.on('message', message => {
   });
 
 
-
-
-const devs = ['413509726735826946' , '' , '' , ''];
-const adminprefix = ".";
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-      
-  if (message.content.startsWith(adminprefix + 'ply')) {
-    client.user.setGame(argresult);
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/ldoe");
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  }
-  });
-
+client.on('ready', () => {
+	          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+	var Date15= new Discord.RichEmbed()
+              .setTitle("**  code --- :radio:   :arrow_up:  **")
+  client.user.setGame("Date "+ Day + "-" + Month + "-" + Year + "" `التاريخ`,'https://www.twitch.tv/v5bz');
+});
 
 client.login(process.env.TOKEN)
 
