@@ -2,7 +2,25 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
    client.on('message', message => {
-if (message.content.startsWith('ldoeinfo')){
+if (message.content.startsWith('ldoeroll')){
+     let embed = new Discord.RichEmbed()
+  .setColor("random")
+  .setFooter('Last Day on Earth: Survival', 'https://cdn.discordapp.com/attachments/435973456467591170/446103479442735114/Last_Day_On_Earth_Survival.jpg')
+  .addField('INFO ROLL', ':tm:')
+  .addField('@ADMIN' , 'هو المسؤول الاول في التحكم في السيرفر و هو يقرر كل شيئ')
+  .addField('@MODERATEUR' , 'شرطة السيرفر . يسعى لفرض القواعد . وتسيير السيرفر بشكل منضم')
+  .addField('@GUIDE PRO', 'يقومون بالمساعدة و بالاجابة على تسائلات الاعبين حول اللعبة')
+  .addField('@PARTNERS', 'شركاء السيرفر')
+  .addField('@YOUTUBERS', 'دور خاص بالقنوات')
+  .addField('@SURVIVORS', 'أعضاء المجتمع LDOE')
+
+
+   message.channel.send(embed);
+    }
+});
+
+   client.on('message', message => {
+if (message.content.startsWith('ldoelinks')){
      let embed = new Discord.RichEmbed()
   .setColor("random")
   .setFooter('Last Day on Earth: Survival', 'https://cdn.discordapp.com/attachments/435973456467591170/446103479442735114/Last_Day_On_Earth_Survival.jpg')
@@ -38,7 +56,6 @@ client.on('message', message => {
               Year = currentTime.getFullYear(),
               Month = currentTime.getMonth() + 1,
               Day = currentTime.getDate();
- 
               var Date15= new Discord.RichEmbed()
               .setTitle("**  code --- :radio:   :arrow_up:  **")
 			  .setAuthor(message.author.username)
