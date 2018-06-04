@@ -1,19 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('message', message => {
-      if (message.content === "تاست") {
-          var currentTime = new Date(),
-              Year = currentTime.getFullYear(),
-              Month = currentTime.getMonth() + 1,
-              Day = currentTime.getDate();
-              .setColor('RANDOM')
-              .setTimestamp()
-              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
-	message.channel.send(new date)
-      }
-  });
-
 
    client.on('message', message => {
 if (message.content.startsWith('ldoeroll')){
