@@ -10,7 +10,7 @@ client.on('message', message => {
               .setColor('RANDOM')
               .setTimestamp()
               .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
-	message.channel.send(':radio: ');
+	message.channel.send(new date)
       }
   });
 
