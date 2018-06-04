@@ -1,6 +1,22 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+client.on('message', message => {
+      if (message.content === "تاست") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+              var Date15= new Discord.RichEmbed()
+              .setColor('RANDOM')
+              .setTimestamp()
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+              .setFooter(`Last Day on Earth `, 'https://i.pinimg.com/564x/bb/1a/98/bb1a980879ff927107273b761d4fbdd0.jpg')
+			   message.channel.sendEmbed(Date15);
+      }
+  });
+
+
    client.on('message', message => {
 if (message.content.startsWith('ldoeroll')){
      let embed = new Discord.RichEmbed()
