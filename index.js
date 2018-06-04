@@ -7,11 +7,10 @@ client.on('message', message => {
               Year = currentTime.getFullYear(),
               Month = currentTime.getMonth() + 1,
               Day = currentTime.getDate();
-              var Date15= new Discord.RichEmbed()
               .setColor('RANDOM')
               .setTimestamp()
               .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
-	message.channel.send(:radio: );
+	message.channel.send(':radio: ');
       }
   });
 
