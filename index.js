@@ -58,7 +58,6 @@ client.on('message', message => {
               Month = currentTime.getMonth() + 1,
               Day = currentTime.getDate();
               var Date15= new Discord.RichEmbed()
-              .setTitle("**  code --- :radio:   :arrow_up:  **")
 			  .setAuthor(message.author.username)
               .setColor('RANDOM')
               .setTimestamp()
