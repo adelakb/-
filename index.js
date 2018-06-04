@@ -58,7 +58,6 @@ client.on('message', message => {
               Month = currentTime.getMonth() + 1,
               Day = currentTime.getDate();
               var Date15= new Discord.RichEmbed()
-			  .setAuthor(message.author.username)
               .setColor('RANDOM')
               .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
 			   message.channel.sendEmbed(Date15);
