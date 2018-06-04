@@ -61,7 +61,6 @@ client.on('message', message => {
 			  .setAuthor(message.author.username)
               .setColor('RANDOM')
               .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
-              .setFooter(`Last Day on Earth `, 'https://i.pinimg.com/564x/bb/1a/98/bb1a980879ff927107273b761d4fbdd0.jpg')
 			   message.channel.sendEmbed(Date15);
       }
   });
