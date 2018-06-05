@@ -43,7 +43,7 @@ if (message.content.startsWith('ldoelinks')){
 
 client.on('message', message => {
     if (message.content.includes('ncode')) {
-    if (!message.guild.me.roles.has("name", "Codecontrol") return message.channel.send('انت لا تملك دور تغيير الكود');
+    if (!message.guild.me.roles.find("code") return message.channel.send('انت لا تملك دور تغيير الكود');
     message.guild.me.setNickname(message.content.replace('ncode', 'code bunker '));
         message.channel.send('تم تغيير الكود :white_check_mark: ');
 }
