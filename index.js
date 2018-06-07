@@ -2,49 +2,11 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-   client.on('message', message => {
-if (message.content.startsWith('ldoeroll')){
-     let embed = new Discord.RichEmbed()
-  .setColor("random")
-  .setFooter('Last Day on Earth: Survival', 'https://cdn.discordapp.com/attachments/435973456467591170/446103479442735114/Last_Day_On_Earth_Survival.jpg')
-  .addField('INFO ROLL', ':tm:')
-  .addField('@ADMIN' , 'هو المسؤول الاول في التحكم في السيرفر و هو يقرر كل شيئ')
-  .addField('@MODERATEUR' , 'شرطة السيرفر . يسعى لفرض القواعد . وتسيير السيرفر بشكل منضم')
-  .addField('@GUIDE PRO', 'يقومون بالمساعدة و بالاجابة على تسائلات الاعبين حول اللعبة')
-  .addField('@PARTNERS', 'شركاء السيرفر')
-  .addField('@YOUTUBERS', 'دور خاص بالقنوات')
-  .addField('@SURVIVORS', 'أعضاء المجتمع LDOE')
-
-
-   message.channel.send(embed);
-    }
-});
-
-   client.on('message', message => {
-if (message.content.startsWith('ldoelinks')){
-     let embed = new Discord.RichEmbed()
-  .setColor("random")
-  .setFooter('Last Day on Earth: Survival', 'https://cdn.discordapp.com/attachments/435973456467591170/446103479442735114/Last_Day_On_Earth_Survival.jpg')
-  .addField('OFFICIAL LINKS', ':tm:')
-  .addField('Google Play (for Android users):' , 'https://goo.gl/24XTLu')
-  .addField('Apps Store (for iOS users) :' , 'https://appsto.re/ru/-eMbkb.i')
-  .addField('SUPPORT', 'https://kefirgames.helpshift.com/a/last-day-on-earth/')
-  .addField('FACEBOOK', 'https://www.facebook.com/lastdayonearthgame')
-  .addField('INSTAGRAM', 'https://www.instagram.com/lastdayonearthgame')
-  .addField('TELEGRAM', 'https://t.me/lastdayonearthsurvival')
-  .addField('TWITTER', 'https://twitter.com/lastdaysurvival')
-  .addField('REDDIT', 'https://www.reddit.com/r/LastDayonEarthGame')
-  .addField('DISCORD', 'https://discord.gg/c7Snete')
-
-
-   message.channel.send(embed);
-    }
-}); 
-
 client.on('message', message => {
     if (message.content.includes('ncode')) {
     if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
     message.guild.me.setNickname(message.content.replace('ncode', 'code bunker '));
+	    message.channel.send(':white_check_mark:');
 }
 });
 
