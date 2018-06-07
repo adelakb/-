@@ -6,7 +6,6 @@ client.on('message', message => {
     if (message.content.includes('ncode')) {
     if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
     message.guild.me.setNickname(message.content.replace('ncode', 'code bunker '));
-	    message.channel.send(':white_check_mark:');
 }
 });
 
