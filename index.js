@@ -9,6 +9,44 @@ client.on('message', message => {
 }
 });
 
+client.on('message', message => {
+      if (message.content === "code bunker") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+              var Date15= new Discord.RichEmbed()
+              .setColor('RANDOM')
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+			   message.channel.sendEmbed(Date15);
+      }
+  });
+
+client.on('message', message => {
+      if (message.content === "Code bunker") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+              var Date15= new Discord.RichEmbed()
+              .setColor('RANDOM')
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+			   message.channel.sendEmbed(Date15);
+      }
+  });
+
+client.on('message', message => {
+      if (message.content === "Code Bunker") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+              var Date15= new Discord.RichEmbed()
+              .setColor('RANDOM')
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+			   message.channel.sendEmbed(Date15);
+      }
+  });
   
 client.on('message', message => {
       if (message.content === "bunker code") {
@@ -23,8 +61,22 @@ client.on('message', message => {
       }
   });
 
+
 client.on('message', message => {
-      if (message.content === "code bunker") {
+      if (message.content === "Bunker code") {
+          var currentTime = new Date(),
+              Year = currentTime.getFullYear(),
+              Month = currentTime.getMonth() + 1,
+              Day = currentTime.getDate();
+              var Date15= new Discord.RichEmbed()
+              .setColor('RANDOM')
+              .setDescription( "Date "+ Day + "-" + Month + "-" + Year + "")
+			   message.channel.sendEmbed(Date15);
+      }
+  });
+
+client.on('message', message => {
+      if (message.content === "Bunker Code") {
           var currentTime = new Date(),
               Year = currentTime.getFullYear(),
               Month = currentTime.getMonth() + 1,
