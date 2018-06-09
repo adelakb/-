@@ -2,10 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-client.on('message', message => {
-    if (message.content.includes('ncode')) {
-    if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
-    message.guild.me.setNickname(message.content.replace('ncode', 'code bunker '));
+client.on('message',message=> {
+if (message.content.includes('ncode')) {
+    if (!message.member.roles.find("name", "manage bunker code")) return message.channel.send(' :unamused:   You do not have permission ! :x: ');
+    message.guild.me.setNickname(message.content.replace('ncode', 'Code Bunker '));{
+message.channel.send(':radio: Code changed :white_check_mark: ');
+}
 }
 });
 
