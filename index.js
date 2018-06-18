@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var prefix = "---"
-const channelID = "458061770679123968";
+const channelID = "424313234892521509";
 client.on('message', message => { 
 
     if (!message.content.startsWith(prefix)) return;
