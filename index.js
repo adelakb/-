@@ -1,6 +1,29 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+var prefix = "---"
+const channelID = "458061770679123968";
+client.on('message', message => { 
+
+    if (!message.content.startsWith(prefix)) return;
+
+    console.log('A command was found.')
+
+    let args = message.content.split(' ').slice(1);
+
+    if (message.author.bot) return;
+
+
+
+
+    if (message.content.startsWith(prefix + '2')) {
+        client.channels.get(channelID).send(args)
+    }
+		
+
+
+});
+
 
 client.on('message',message=> {
 if (message.content.includes('ncode')) {
